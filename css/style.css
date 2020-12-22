@@ -1,0 +1,232 @@
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+@font-face {
+  font-family: Marker Felt Wide;
+  src: url(../ttf/marker-felt-wide.ttf);
+}
+
+body {
+  color: #479de9;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 400;
+  background-color: #000014;
+}
+
+.container {
+    max-width: 1200; /* 1170 + 2 паддинга */
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.container-content {
+    max-width: 970px;
+    margin: 0 auto;
+}
+
+.section-line {    
+    border-bottom: 1px solid rgba(208, 212, 216, 0.5);
+}
+
+.header_top {
+  height: 100vh;
+  padding: 40px;
+}
+
+.header_top_inner {
+    border: 2px solid #ecb84c;
+    border-bottom: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.header_title {
+    color: #f5b705;
+    font-family: 'Marker Felt Wide';
+    font-weight: bold;
+    font-size: 100px;
+    margin: auto; /* при род. эл-те с display:flex центрирует */
+}
+
+.header_text {
+    font-size: 24px;
+    /*line-height: 27px;*/
+    display: flex; /* чтобы на него тоже распространялся margin:auto родительского */
+    white-space: nowrap;
+    align-items: center;
+    margin-bottom: -12.5px; /* определено экспериментально */
+}
+
+.header_text::before,
+.header_text::after {
+    content: ""; /* без этого before и after не работает */
+    border-top: 2px solid #ecb84c;
+    width: 100%;
+}
+
+.header_text::before {
+    margin-right: 30px;
+}
+
+.header_text::after {
+    margin-left: 30px;
+}
+
+.menu {
+    border-bottom: 1px solid rgba(208, 212, 216, 0.5);
+}
+
+.menu_list {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu_list-link {
+    padding: 24px 10px 20px; /* сверху - между - снизу */
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 19px;
+    color: #909090;
+    margin: 0 6px;
+    border-bottom: 4px solid transparent;
+}
+
+.menu_list-link:hover {
+    color: #4E5665;
+    border-bottom: 4px solid #ECB84C;
+    transition: all .2s;
+}
+
+.article {
+    padding: 80px 0 0;
+}
+
+.article_title {    
+    font-family: Georgia;
+    font-size: 32px;
+    line-height: 38px;
+    text-align: center;
+    color: #4E5665;
+    margin-bottom: 18px;
+}
+
+.article_text {
+    margin-bottom: 22px;
+}
+
+.reason_link {
+    text-align: right;
+}
+
+.reason_link a{
+    font-weight: bold;
+    color: #ECB84C;
+    margin-bottom: 36px;
+}
+
+.reason_stats {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 80px;
+}
+
+.reason_stats-numbers {
+    margin-top: 32px;
+    color: #4E5665;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 30px;
+}
+
+.reason_stats-text {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;    
+    color: #909090;
+}
+
+.about_item {
+    margin-bottom: 100px;
+    padding: 70px 0;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.about_item:nth-child(even) {
+    background-position: left;
+}
+
+.about_box {
+    max-width: 470px;
+    position: relative;
+    padding: 33px 40px;
+    background-color: white;
+}
+
+.about_item:nth-child(even) .about_box {
+    margin-left: auto;
+}
+
+.about_box::before,
+.about_box::after {
+    content: "";
+    position: absolute;
+    width: 33px;
+    height: 33px;
+}
+
+.about_box::before {
+    background-image: url(../images/decor-tl.svg);
+    left: 19px;  
+    top: 19px;
+}
+
+.about_box::after {
+    border-bottom: 2px solid #ecb84c;
+    border-right: 2px solid #ecb84c;
+    bottom: 19px;
+    right: 19px;
+}
+
+.about_item:nth-child(even) .about_box::before {
+    background-image: none;
+    border-top: 2px solid #ecb84c;
+    border-right: 2px solid #ecb84c;
+    right: 19px;
+    left: auto;
+}
+    
+.about_item:nth-child(even) .about_box::after {
+    border-bottom: 2px solid #ecb84c;
+    border-left: 2px solid #ecb84c;
+    border-right: none;
+    left: 19px;
+    right: auto;
+}
+
+.about_title {
+    font-family: Georgia;
+    font-size: 24px;
+    line-height: 25px;
+    color: #4E5665;
+    margin-bottom: 20px;
+}
+
