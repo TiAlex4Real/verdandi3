@@ -129,6 +129,25 @@ body {
     margin-bottom: 22px;
 }
 
+.crawl_title {
+  color: #f5b705;
+  font-size: 48px;
+  line-height: 38px;
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.crawl_text {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  text-align: justify;
+  color: #f5b705;
+  font-size: 24px;
+  line-height: 32px;
+  margin-bottom: 22px;
+}
+
 .reason_link {
     text-align: right;
 }
